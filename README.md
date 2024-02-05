@@ -50,9 +50,11 @@ bash
 Configure the database:
 
 Update the .env file with your database credentials:
-
+           
     dotenv
 
+
+ Modify Database
      DB_CONNECTION=mysql
      DB_HOST=127.0.0.1
      DB_PORT=3306
