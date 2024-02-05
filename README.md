@@ -1,75 +1,73 @@
-### System Specifications
+README.md
 
-| Requirements | Versions |
-| :----------: | :------: |
-|   LARAVEL    |   10.x    |
-|     PHP      | ^8.1.10  |
-|    MYSQL     |   ^10.4.25   |
 
-## Configuration
+Make sure you have the following installed on your machine:
 
-1.  Clone this repository.
+    Composer
+    Node.js
+    NPM (comes with Node.js installation)
+    PHP
+    MySQL or any other database system of your choice
 
-    ```bash
-        $   git clone https://github.com/ericnicdao069/backend-dev-exam.git
-    ```
+Steps
 
-2.  Recreate environment variable file.
+ Clone the repository:
 
-    ```bash
-        $   cp .env.example .env
-    ```
+ bash
 
-3.  Install composer and npm.
+    (https://github.com/Amy9594/qa-engineer-exam.git)
 
-    ```bash
-        $   composer install && npm install
-    ```
+Navigate to the project directory:
 
-4.  Generate Application Key.
+bash 
 
-    ```bash
-        $   php artisan key:generate
-    ```
+    cd your-project
 
-5.  Create your DB and update your DB configs in .env.
+Install Composer dependencies:
 
-    ```bash
-        $   DB_CONNECTION=mysql
-        $   DB_HOST=127.0.0.1
-        $   DB_PORT=3306
-        $   DB_DATABASE=laravel
-        $   DB_USERNAME=root
-        $   DB_PASSWORD=
-    ```
+ bash
+ 
+     composer install
 
-6.  Execute Database Migration and Seeders.
+ Install NPM dependencies:
 
-    ```bash
-        $   php artisan migrate --seed
-    ```
+ bash    
+            
+	npm install
 
-7.  Create a symlink for Storage in Public Directory.
+Copy the environment file:
 
-    ```bash
-        $   php artisan storage:link
-    ```
+bash
 
-8.  Generate Ziggy routes.
+    cp .env.example .env
 
-    ```bash
-        $   php artisan ziggy:generate
-    ```
+Generate an application key:
 
-9.  Run local server.
+bash
 
-    ```bash
-        $   php artisan serve
-    ```
+    php artisan key:generate
 
-10.  Front Build.
+Configure the database:
 
-    ```bash
-        $   npm run dev
-        $   npm run build
-    ```
+Update the .env file with your database credentials:
+
+    dotenv
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+
+Run database migrations and seeders:
+
+bash
+
+    php artisan migrate --seed
+
+Run the tests:
+
+bash
+
+    php artisan test
